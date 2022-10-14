@@ -23,7 +23,7 @@ class SpinKit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
         elevation: 0.1,
         centerTitle: true,
@@ -39,19 +39,20 @@ class SpinKit extends StatelessWidget {
           const Center(
             child: Text(
               'L O A D I N G . . . ',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
           const SizedBox(
             height: 50,
           ),
-          SpinKitFadingCube(
+          SpinKitCubeGrid(
             size: 50,
             itemBuilder: (BuildContext context, int index) {
-              return DecoratedBox(
-                decoration: BoxDecoration(
-                    color: index.isEven ? Colors.red : Colors.blue),
-              );
+              return const DecoratedBox(
+                  decoration: BoxDecoration(
+                // color: index.isEven ? Colors.red : Colors.blue),
+                color: Colors.amber,
+              ));
             },
           )
         ],
