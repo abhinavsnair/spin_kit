@@ -37,13 +37,15 @@ class SpinKit extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Center(
-            child: Text('L O A D I N G . . . ',style: TextStyle(
-              fontSize: 20
-            ),),
+            child: Text(
+              'L O A D I N G . . . ',
+              style: TextStyle(fontSize: 20),
+            ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           SpinKitFadingCube(
-            
             size: 50,
             itemBuilder: (BuildContext context, int index) {
               return DecoratedBox(
